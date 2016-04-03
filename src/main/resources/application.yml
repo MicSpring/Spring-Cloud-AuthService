@@ -1,0 +1,15 @@
+eureka:
+  instance:
+    preferIpAddress: true
+    leaseRenewalIntervalInSeconds: 10
+    metadataMap:
+      instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8763/eureka/
+    
+server:
+  port: 0
+  contextPath: /authservice
+
+      
